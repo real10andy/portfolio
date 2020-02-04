@@ -18,21 +18,7 @@ $(function(){
 //     return false;
 //   });
 
-
-
-// $(function() {
-//   var $allMsg = $('.hero__subtitle');
-//   var $wordList = $('.hero__subtitle').html().split("");
-//   $('.hero__subtitle').html("");
-//   $.each($wordList, function(idx, elem) {
-//       var newEL = $("<span/>").text(elem).css({ opacity: 0 });
-//       newEL.appendTo($allMsg);
-//       newEL.delay(idx * 70);
-//       newEL.animate({ opacity: 1 }, 1100);
-//   });
-// });
-
-
+// ヒーロ画面アニメーション
 $(function() {
   var $allMsg = $('.hero__title');
   var $wordList = $('.hero__title').html().split("");
@@ -45,35 +31,23 @@ $(function() {
   });
 });
 
-// $(function() {
-//   var $allMsg = $('.logo-desc');
-//   var $wordList = $('.logo-desc').html().split("");
-//   $('.logo-desc').html("");
-//   $.each($wordList, function(idx, elem) {
-//       var newEL = $("<span/>").text(elem).css({ opacity: 0 });
-//       newEL.appendTo($allMsg);
-//       newEL.delay(idx * 70);
-//       newEL.animate({ opacity: 1 }, 1100);
-//   });
-// });
-
 $(window).scroll(function (){
   $('.fadein').each(function(){
-      var elemPos = $(this).offset().top,
-          scroll = $(window).scrollTop(),
-          windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight + 100){
-            $(this).addClass('scrollin');
-          }
-      });
+    var elemPos = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + 100){
+          $(this).addClass('scrollin');
+      }
   });
-  
-// });
+});
 
+// 実績集のプラグイン
 $('.single').slick({
   autoplay: true, //自動再生
 });
 
+// ナビゲーションのアニメーション
 (function($) {
   $(function() {
       var $header = $('.header');
@@ -96,6 +70,7 @@ $('.single').slick({
   });
 })(jQuery);
 
+// フェードイン
 $(function(){
   $(window).scroll(function (){
     $(".fadein").each(function(){
@@ -111,24 +86,25 @@ $(function(){
   });
 });
 
+// ローディングアニメーション
 $(function() {
   var h = $(window).height();
    $('#loading__wrapper').css('display','none');
    $('#is-loading ,#loading').height(h).css('display','block');
+});
+ 
+$(window).on('load', function () {
+  $('#is-loading').delay(900).fadeOut(800);
+  $('#loading').delay(600).fadeOut(300);
+  $('#loading__wrapper').css('display', 'block');
+});
+
+$(function(){
+  setTimeout('stopload()',10000);
   });
- 
-  $(window).load(function () {
-   $('#is-loading').delay(900).fadeOut(800);
-   $('#loading').delay(600).fadeOut(300);
-   $('#loading__wrapper').css('display', 'block');
-  });
- 
-  $(function(){
-   setTimeout('stopload()',10000);
-   });
- 
-   function stopload(){
-    $('#loading__wrapper').css('display','block');
-    $('#is-loading').delay(900).fadeOut(800);
-    $('#loading').delay(600).fadeOut(300);
-  }
+
+  function stopload(){
+  $('#loading__wrapper').css('display','block');
+  $('#is-loading').delay(900).fadeOut(800);
+  $('#loading').delay(600).fadeOut(300);
+}
