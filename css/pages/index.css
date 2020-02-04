@@ -475,7 +475,7 @@ tremplate { display: none; }
 .header.fixed .g-nav a { color: #fff; }
 
 /* Toggle Button */
-.nav-toggle { display: none; position: absolute; right: 12px; top: 14px; width: 34px; height: 36px; cursor: pointer; z-index: 101; }
+.nav-toggle { display: none; position: absolute; right: 12px; top: 14px; width: 34px; height: 36px; cursor: pointer; z-index: 998; }
 
 @media screen and (max-width: 1024px) { .nav-toggle { display: block; } }
 
