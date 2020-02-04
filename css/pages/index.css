@@ -230,7 +230,7 @@ tremplate { display: none; }
 
 .about__img { width: 40rem; height: 40rem; border-radius: 50%; }
 
-@media screen and (max-width: 1024px) { .about__img { width: 80rem; max-width: 80rem; height: auto; margin-bottom: 6rem; } }
+@media screen and (max-width: 1024px) { .about__img { width: 60rem; max-width: 60rem; height: auto; margin-bottom: 6rem; } }
 
 .about .table { font-size: 2rem; text-align: left; }
 
