@@ -64,8 +64,9 @@ $('.single').slick({
           $header.toggleClass('open');
       });
 
-      $('.g-nav__item').click(function(){
-        $header.toggleClass('open');
+      $('.g-nav__item a').click(function(){
+          $header.toggleClass('open');
+          console.log("openクラスをとりました");
     });
   });
 })(jQuery);
